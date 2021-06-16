@@ -20,7 +20,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'patronymic')->label('Отчество')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'status')->label('Статус (препод-1/студент-0)')->textInput() ?>
+    <?= $form->field($model, 'status')->label('Статус (препод/студент)')->dropDownList([
+        '0' => 'Студент',
+        '1' => 'Преподаватель',
+    ]); ?>
 
     <?= $form->field($model, 'group_id')->dropDownList(\backend\models\Groups::find()->select(["name", 'id'])->indexBy('id')->column(), ['prompt' => 'Выбрать группу...']) ?>
 
