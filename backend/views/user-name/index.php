@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
      
             //'status',
-            //'group_id',
+            ['attribute' => 'group_id','label' => 'Группа', 'value'=>'group.name'],
             //'specialty_id',
 
             ['class' => 'yii\grid\ActionColumn'],

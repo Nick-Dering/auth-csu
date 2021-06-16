@@ -44,6 +44,7 @@ class UserName extends \yii\db\ActiveRecord
             [['user_id', 'status', 'group_id', 'specialty_id'], 'integer'],
             [['firstname', 'patronymic'], 'string', 'max' => 35],
             [['lastname'], 'string', 'max' => 64],
+            [['user_id'], 'unique'],
             [['group_id'], 'exist', 'skipOnError' => true, 'targetClass' => Groups::className(), 'targetAttribute' => ['group_id' => 'id']],
             [['specialty_id'], 'exist', 'skipOnError' => true, 'targetClass' => Specialties::className(), 'targetAttribute' => ['specialty_id' => 'id']],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
