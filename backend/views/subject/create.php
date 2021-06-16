@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $model app\models\Subject */
 
 $this->title = 'Добавить учебную дисциплину';
-$this->params['breadcrumbs'][] = ['label' => 'Subjects', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Дисциплины', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="subject-create">

@@ -3,7 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $groups yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Кабинет преподавателя';
 use yii\helpers\Url;
 ?>
 <?php
@@ -11,7 +11,7 @@ use yii\helpers\Url;
 //    echo '<a href="/index.php?r=site%2Fstudents&id='.$value['group']['id'].'">'.$value['subject']['name'].'-'.$value['group']['name'].'</a><br>';
 //}
 //?>
-<h4><b>Вы: </b><?= Yii::$app->user->identity->userName[0]->fio; ?></h4>
+<h2><small>Вы вошли как </small><br><?= Yii::$app->user->identity->userName[0]->fio; ?></h2>
 <div class="just-padding">
 
     <div class="list-group list-group-root well">
@@ -20,9 +20,14 @@ use yii\helpers\Url;
 
             <? foreach ($groups as $key => $group) :?>
 
-                <a href="#item-1-<?=$group['id']?>" class="list-group-item collapsed" data-toggle="collapse" aria-expanded="false">
-                    <i class="glyphicon glyphicon-chevron-right"></i><?=$key?>
-                </a>
+                <big>
+                    <strong>
+                        <a href="#item-1-<?=$group['id']?>" class="list-group-item collapsed" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-chevron-right"></i><?=$key?>
+                        </a>
+                    </strong>
+                </big>
+
                 <div class="list-group collapse" id="item-1-<?=$group['id']?>" aria-expanded="false" style="height: 0px;">
 
                     <? foreach ($group['subject'] as $subject) :?>

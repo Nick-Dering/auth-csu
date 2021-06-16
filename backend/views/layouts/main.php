@@ -29,7 +29,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => "Личный кабинет учащегося [АДМИН]",
+        'brandLabel' => "[Админка]",
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -38,7 +38,7 @@ AppAsset::register($this);
     $menuItems = [
         ['label' => 'Группы', 'url' => ['/group']],
         ['label' => 'Специальности', 'url' => ['/specialtie']],
-        ['label' => 'Предметы', 'url' => ['/subject']],
+        ['label' => 'Дисциплины', 'url' => ['/subject']],
         ['label' => 'Типы дисц.', 'url' => ['/type']],
         ['label' => 'Пользователи', 'url' => ['/user-name']],
         ['label' => 'Связи', 'url' => ['/inf-for-teacher']],

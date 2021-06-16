@@ -40,7 +40,6 @@ class UserName extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'firstname', 'lastname'], 'required'],
             [['user_id', 'status', 'group_id', 'specialty_id'], 'integer'],
             [['firstname', 'patronymic'], 'string', 'max' => 35],
             [['lastname'], 'string', 'max' => 64],
@@ -62,7 +61,7 @@ class UserName extends \yii\db\ActiveRecord
             'firstname' => 'Имя',
             'lastname' => 'Фамилия',
             'patronymic' => 'Отчество',
-            'status' => 'Статус (студент/преподаватель)',
+            'status' => 'Статус (0 -студент/1 - преподаватель)',
             'group_id' => 'Группа',
             'specialty_id' => 'Специальность',
         ];

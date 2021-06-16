@@ -17,10 +17,13 @@ use yii\widgets\ActiveForm;
 <? endif;?>
 <div class="container">
 
-<h3><b>Группа: </b><?= $model[0]['student']['group']['name']; ?></h3>
-
-<h3><b>Предмет: </b> <?= $model[0]['subject']['name'].' | Семестр - '.$model[0]['semester'];?> </h3>
-<h3><b>Тип Дисциплины: </b> <?= $model[0]['type']['name'];?> </h3>
+<h3 style="line-height:1.5">Группа: <?= $model[0]['student']['group']['name']; ?>
+<br>
+Предмет:  <?= $model[0]['subject']['name'] ?> 
+<br>
+Семестр: <?= $model[0]['semester'];?> 
+<br>
+Тип Дисциплины:  <?= $model[0]['type']['name'];?> </h3>
 
 <?php
 

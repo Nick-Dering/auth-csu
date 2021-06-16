@@ -44,7 +44,7 @@ class Type extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Тип дисциплины',
-            'variant' => 'Условное обозначение',
+            'variant' => 'Мера оценки (0 - зачет/незачет; 1 - пятибальная шкала)',
         ];
     }
 
@@ -73,8 +73,9 @@ class Type extends \yii\db\ActiveRecord
         $variant = $this->variant;
         switch ($variant){
             case 0:
+                $arr[0] = 'Неявка';
                 $arr[7]  = 'Зачет';
-                $arr[8]  = 'Не зачет';
+                $arr[8]  = 'Незачет';
                 break;
             case 1:
                 $arr[0] = 'Неявка';

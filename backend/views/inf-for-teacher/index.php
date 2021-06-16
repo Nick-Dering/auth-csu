@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\search\InfForTeacherSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Преподователи и группы у которых они ведут';
+$this->title = 'Преподаватели и группы у которых они ведут';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="inf-for-teacher-index">

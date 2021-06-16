@@ -20,14 +20,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'patronymic')->label('Отчество')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'status')->label('Статус (препод/студент)')->dropDownList([
-        '0' => 'Студент',
-        '1' => 'Преподаватель',
-    ]); ?>
+    <?= $form->field($model, 'status')->label('Статус (препод-1/студент-0)')->textInput() ?>
 
-    <?= $form->field($model, 'group_id')->label('Группа')->dropDownList(\backend\models\Groups::find()->select(["name", 'id'])->indexBy('id')->column(), ['prompt' => 'Выбрать группу...']) ?>
+    <?= $form->field($model, 'group_id')->dropDownList(\backend\models\Groups::find()->select(["name", 'id'])->indexBy('id')->column(), ['prompt' => 'Выбрать группу...']) ?>
 
-    <?= $form->field($model, 'specialty_id')->label('Специальность')->dropDownList(\backend\models\Specialties::find()->select(["name", 'id'])->indexBy('id')->column(), ['prompt' => 'Выбрать специальность...']) ?>
+    <?= $form->field($model, 'specialty_id')->dropDownList(\backend\models\Specialties::find()->select(["name", 'id'])->indexBy('id')->column(), ['prompt' => 'Выбрать специальность...']) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>

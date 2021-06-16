@@ -6,9 +6,9 @@ use yii\helpers\Html;
 /* @var $model app\models\Specialties */
 
 $this->title = 'Изменить специальность: ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Specialties', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Специальность', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Изменить';
 ?>
 <div class="specialties-update">
 

@@ -129,7 +129,7 @@ class Rating extends \yii\db\ActiveRecord
                 $rating =  'Зачет';
                 break;
             case 8:
-                $rating =  'Не зачет';
+                $rating =  'Незачет';
                 break;
         }
         return $rating;

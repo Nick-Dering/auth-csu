@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\InfForTeacher */
 
-$this->title = 'Изменить связь преподавателя с группой ' . $model->id;
+$this->title = 'Изменить связь преподавателя с группой ' . $model->group->name;
 $this->params['breadcrumbs'][] = ['label' => 'Преподаватели и их группы', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = ['label' => 'Назад', 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Изменить';
 ?>
 <div class="inf-for-teacher-update">

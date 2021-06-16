@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $model backend\models\Type */
 
 $this->title = 'Добавить тип учебной дисциплины';
-$this->params['breadcrumbs'][] = ['label' => 'Types', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Типы', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="type-create">

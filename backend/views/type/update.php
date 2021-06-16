@@ -6,9 +6,9 @@ use yii\helpers\Html;
 /* @var $model backend\models\Type */
 
 $this->title = 'Изменить тип учебной дисциплины: ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Types', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Типы', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Изменить';
 ?>
 <div class="type-update">
 

@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Rating */
 
-$this->title = 'Update Rating: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Ratings', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'Изменить оценку';
+$this->params['breadcrumbs'][] = ['label' => 'Оценки', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Выбранная оценка', 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = 'Изменить';
 ?>
 <div class="rating-update">
 

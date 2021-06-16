@@ -6,7 +6,7 @@
 /* @var $items yii\web\View */
 /* @var $n yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Кабинет студента';
 
 use yii\helpers\Url;
 use yii\helpers\Html;
@@ -15,11 +15,18 @@ use backend\models\Rating;
 ?>
 <div class="container">
 
-    <h3><b>Специальность: </b><?= Yii::$app->user->identity->userName[0]->specialty->name ?></h3>
-
-    <h4><b>Студент: </b><?= Yii::$app->user->identity->userName[0]->fio; ?></h4>
-
-    <h4><b>Группа: </b><?= Yii::$app->user->identity->userName[0]->group->name ?></h4>
+    <h2>
+        <small>Вы вошли как</small>
+        <br>
+        <?= Yii::$app->user->identity->userName[0]->fio; ?>
+    </h2>
+    <hr>
+    <h3>
+        <?= Yii::$app->user->identity->userName[0]->specialty->name?> 
+        <br>
+        Группа <?= Yii::$app->user->identity->userName[0]->group->name ?>
+    </h3>
+    <br>
 
     <?= Html::beginForm(['site/index-student'], 'get' ); ?>
     <div class="form-group">
@@ -31,9 +38,9 @@ use backend\models\Rating;
                 <?= Html::dropDownList('part', 'null', $items, ['class' => 'form-control', 'options'=>[ $n =>["Selected"=>true]]]) ?>
             </div>
         </div>
-        <div class="input-group-btn">
+        <div class="input-group-btn" style="padding: 0 0 0 5px;">
             <div class="col-auto my-1">
-                <?= Html::submitButton('Выбрать', ['type' => 'button', 'class' => 'btn btn-secondary']) ?>
+                <?= Html::submitButton('Выбрать', ['type' => 'button', 'class' => 'btn btn-primary']) ?>
             </div>
         </div>
     </div>

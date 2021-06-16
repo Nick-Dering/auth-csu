@@ -96,12 +96,12 @@ class SiteController extends Controller
         $search = ['student_id' => $this->getUserID()];
         $n = mb_substr(Yii::$app->user->identity->userName[0]->group->name, 3,1);
         $items = [
-            1 => 'Первый курс',
-            2 => 'Второй курс',
-            3 => 'Третий крус',
-            4 => 'Четвёртый курс',
-            5 => 'Пятый курс',
-            6 => 'Все семестры',
+            1 => '1 курс',
+            2 => '2 курс',
+            3 => '3 курс',
+            4 => '4 курс',
+            5 => '5 курс',
+            6 => 'Все курсы',
         ];
         $arr = [];
 
@@ -142,7 +142,6 @@ class SiteController extends Controller
             ->with(['teacher', 'type', 'subject'])
             ->where($search)
             ->andWhere($arr)
-            ->orderBy(['rating.semester' => SORT_ASC])
             ->asArray()->all();
 
 //        VarDumper::dump(Yii::$app->user->identity->userName[0]->group->name, 10, true );

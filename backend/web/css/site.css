@@ -3,16 +3,33 @@ body {
     height: 100%;
 }
 
-body.blank {
-    display: flex;
-    padding: 40px 0;
+@font-face { font-family: 'CenturyGothic-Bold';  src: local('CenturyGothic-Bold'), url('https://nomail.com.ua/files/woff/bc420c1c2b98e2ee8b2a75c1ce1fe083.woff') format('woff'); }
+
+.fontbc420c1c2b98e2ee8b2a75c1ce1fe083 { font-family: 'fontbc420c1c2b98e2ee8b2a75c1ce1fe083'; }
+
+h1 {
+    font-family: 'CenturyGothic-Bold';
+    font-weight: normal;
+}
+
+h2, h3, h4 {
+    font-family: 'CenturyGothic-Bold';
+    font-weight: normal;
+    color: black;
 }
 
 .wrap {
+    font-family: segoe ui;
+    font-size: medium;
     min-height: 100%;
     height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
+}
+
+body.blank {
+    display: flex;
+    padding: 40px 0;
 }
 
 body.blank .wrap {
