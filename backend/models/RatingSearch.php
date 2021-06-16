@@ -64,7 +64,7 @@ class RatingSearch extends Rating
             'rating' => $this->rating == 1 ? '' : $this->rating,
             'date' => $this->date,
             'type_id' => $this->type_id,
-            'student_id' => $this->student,
+            'student_id' => $this->student_id,
             'semester' => $this->semester,
         ]);
 
