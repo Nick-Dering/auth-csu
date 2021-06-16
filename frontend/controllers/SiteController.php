@@ -142,6 +142,7 @@ class SiteController extends Controller
             ->with(['teacher', 'type', 'subject'])
             ->where($search)
             ->andWhere($arr)
+            ->orderBy(['rating.semester' => SORT_ASC])
             ->asArray()->all();
 
 //        VarDumper::dump(Yii::$app->user->identity->userName[0]->group->name, 10, true );
